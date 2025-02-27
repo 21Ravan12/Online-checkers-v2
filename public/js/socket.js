@@ -1,4 +1,4 @@
-const socket = io("http://192.168.0.158:3002");
+const socket = io("http://127.0.0.1:3002");
 let activeRooms = [];
 let activeRoomId = null;
 let opponentId;
