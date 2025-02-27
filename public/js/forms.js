@@ -40,7 +40,7 @@ async function signUp(event) {
     navigateTo('waitingScreenForAuth');
 
     try {
-        const response = await fetch("http://192.168.0.158:9090/api/users/register", {
+        const response = await fetch("http://127.0.0.1:9090/api/users/register", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(payload)
@@ -92,7 +92,7 @@ async function verifyCodeForSignup(event) {
     }
 
     try {
-        const response = await fetch("http://192.168.0.158:9090/api/users/verifyForRegister", {
+        const response = await fetch("http://127.0.0.1:9090/api/users/verifyForRegister", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ code, token })
@@ -125,7 +125,7 @@ async function logIn(event) {
     }
 
     try {
-        const response = await fetch("http://192.168.0.158:9090/api/users/login", {
+        const response = await fetch("http://127.0.0.1:9090/api/users/login", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ email, password })
@@ -173,7 +173,7 @@ async function sendVerifyCode(event) {
     navigateTo('waitingScreenForAuth');
 
     try {
-        const response = await fetch("http://192.168.0.158:9090/api/users/changeCode", {
+        const response = await fetch("http://127.0.0.1:9090/api/users/changeCode", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(payload)
@@ -222,7 +222,7 @@ async function verifyMenuForRefreshPassword(event) {
     }
 
     try {
-        const response = await fetch("http://192.168.0.158:9090/api/users/verifyForChangeCode", {
+        const response = await fetch("http://127.0.0.1:9090/api/users/verifyForChangeCode", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ code, token })
@@ -261,7 +261,7 @@ async function refreshPassword(event) {
     }
 
     try {
-        const response = await fetch("http://192.168.0.158:9090/api/users/changeCodeEnd", {
+        const response = await fetch("http://127.0.0.1:9090/api/users/changeCodeEnd", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ token, password })
@@ -289,7 +289,7 @@ async function findUser(id) {
     }
 
     try {
-        const response = await fetch(`http://192.168.0.158:9090/api/users/search?id=${encodeURIComponent(id)}`, {
+        const response = await fetch(`http://127.0.0.1:9090/api/users/search?id=${encodeURIComponent(id)}`, {
             method: "GET",
             headers: { "Content-Type": "application/json" }
         });
