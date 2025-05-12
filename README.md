@@ -42,7 +42,7 @@ This is Version 2 of the turn-based game project. This update focuses on improvi
 Feel free to fork the repository and submit pull requests. For major changes, please open an issue first to discuss your ideas.
 
 ## License
-This project is licensed under the MIT License.
+This project is licensed under the MIT License
 
 
 
